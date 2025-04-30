@@ -9,7 +9,7 @@ template:
       default: 2
 config:
   length:
-    description: The length (in words) of the pet name
+    type: integer
     default: 2
 resources:
   username:
