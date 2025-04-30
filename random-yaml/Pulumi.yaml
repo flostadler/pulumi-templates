@@ -3,10 +3,19 @@ description: ${DESCRIPTION}
 runtime: yaml
 template:
   description: A minimal Random Pulumi YAML program.
-
+  config:
+    length:
+      description: The length (in words) of the pet name
+      default: 2
+config:
+  length:
+    description: The length (in words) of the pet name
+    default: 2
 resources:
   username:
     type: random:RandomPet
+    properties:
+      length: ${length}
 
 outputs:
   name: ${username.id}
